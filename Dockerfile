@@ -9,5 +9,6 @@ RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo 
        fonts-migmix \
   && sudo apt-get clean \
   && sudo rm -rf /var/lib/apt/lists/* \
-  && sudo gem uninstall -x bundler \
-  && sudo gem install -N bundler --version 1.15.4
+  && sudo rm /usr/local/lib/ruby/gems/2.4.0/specifications/default/bundler-1.16.0.gemspec \
+  && sudo gem uninstall bundler -a -x \
+  && sudo gem install bundler --version 1.15.4
