@@ -8,4 +8,6 @@ RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo 
        fontconfig \
        fonts-migmix \
   && sudo apt-get clean \
-  && sudo rm -rf /var/lib/apt/lists/*
+  && sudo rm -rf /var/lib/apt/lists/* \
+  && sudo gem uninstall -x bundler \
+  && sudo gem install -N bundler --version 1.15.4
