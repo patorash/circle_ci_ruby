@@ -7,6 +7,7 @@ RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo 
        postgresql-client-9.5 \
        fontconfig \
        fonts-migmix \
+       imagemagick \
   && sudo apt-get clean \
   && sudo rm -rf /var/lib/apt/lists/* \
   && sudo rm /usr/local/lib/ruby/gems/2.4.0/specifications/default/bundler-1.16.0.gemspec \
