@@ -3,10 +3,20 @@ MAINTAINER patorash <chariderpato@gmail.com>
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - \
   && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" >> /etc/apt/sources.list.d/postgresql.list' \
   && sudo apt-get update \
+  && sudo apt-get --purge remove imagemagick libcups2 \
   && sudo apt-get install -y \
        postgresql-client-9.5 \
+       libcups2=1.7.5-11+deb8u2 \
+       libcups2-dev \
+       libcupsimage2 \
+       libcupsfilters-dev \
+       libcupsimage2-dev \
+       libgs9 \
+       libgs-dev \
+       ghostscript \
        fontconfig \
        fonts-migmix \
+       imagemagick \
   && sudo apt-get upgrade \
   && sudo apt-get clean \
   && sudo rm -rf /var/lib/apt/lists/* \
