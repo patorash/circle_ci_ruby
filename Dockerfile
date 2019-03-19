@@ -1,4 +1,4 @@
-FROM circleci/ruby:2.5.3-node-browsers
+FROM circleci/ruby:2.5.5-node-browsers
 MAINTAINER patorash <chariderpato@gmail.com>
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - \
   && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >> /etc/apt/sources.list.d/postgresql.list' \
